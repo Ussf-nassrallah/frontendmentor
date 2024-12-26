@@ -1,0 +1,33 @@
+@import "./mixins";
+
+// flexbox
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+// Visibility
+.hide-for-mobile {
+    // hide for mobile and tablet
+    @include breakpoints-down(medium) {
+        display: none;
+    }
+};
+
+.hide-for-desktop {
+    // hide for desktop
+    @include breakpoints-up(large) {
+        display: none;
+    }
+};
